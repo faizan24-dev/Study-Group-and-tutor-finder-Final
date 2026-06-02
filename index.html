@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Group & Peer Tutor Finder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="custom-bg-zinc">
+
+    <nav class="navbar navbar-expand-lg border-bottom custom-border-purple py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-uppercase tracking-wide" href="index.html">Finder<span class="custom-text-gold">.pk</span></a>
+            <div class="d-flex">
+                <a href="admin.html" class="btn btn-outline-light btn-sm custom-hover-purple">Admin Panel</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        
+        <header class="mb-5 text-center">
+            <h1 class="display-5 fw-bolder">Find Your Learning Circle</h1>
+            <p class="lead text-secondary">Connect with study groups and peer tutors across campus.</p>
+        </header>
+
+        <div class="row g-5">
+            
+            <section class="col-lg-4">
+                <div class="card bg-dark border-0 shadow-lg p-4">
+                    <h3 class="h5 mb-4 fw-bold custom-text-gold">Post a Listing</h3>
+                    
+                    <form id="listing-form" novalidate>
+                        
+                        <div class="mb-3">
+                            <label for="listing-title" class="form-label small text-uppercase">Title / Name</label>
+                            <input type="text" class="form-control bg-secondary border-0 text-light" id="listing-title" required>
+                            <div class="invalid-feedback">Please provide a valid title.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="listing-type" class="form-label small text-uppercase">Type</label>
+                            <select class="form-select bg-secondary border-0 text-light" id="listing-type" required>
+                                <option value="" disabled selected>Select type...</option>
+                                <option value="groups">Study Group</option>
+                                <option value="tutors">Peer Tutor</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a listing type.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="listing-subject" class="form-label small text-uppercase">Subject / Expertise</label>
+                            <input type="text" class="form-control bg-secondary border-0 text-light" id="listing-subject" required>
+                            <div class="invalid-feedback">Subject is required.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="listing-schedule" class="form-label small text-uppercase">Schedule / Availability</label>
+                            <input type="text" class="form-control bg-secondary border-0 text-light" id="listing-schedule" required>
+                            <div class="invalid-feedback">Schedule is required.</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="listing-contact" class="form-label small text-uppercase">Contact Email</label>
+                            <input type="email" class="form-control bg-secondary border-0 text-light" id="listing-contact" required>
+                            <div class="invalid-feedback">Please provide a valid email address.</div>
+                        </div>
+
+                        <button type="submit" class="btn w-100 fw-bold custom-btn-purple">Submit Listing</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="col-lg-8">
+                
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="h4 mb-0 fw-bold">Active Listings</h2>
+                    <div class="w-25">
+                        <select class="form-select bg-dark text-light border-secondary" id="filter-type">
+                            <option value="all">All Listings</option>
+                            <option value="groups">Study Groups Only</option>
+                            <option value="tutors">Tutors Only</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="loading-state" class="text-center py-5 d-none">
+                    <div class="spinner-border custom-text-gold" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+
+                <div id="error-state" class="alert alert-danger d-none border-0" role="alert">
+                    Failed to connect to the server. Please ensure JSON Server is running.
+                </div>
+
+                <div id="listings-container" class="row row-cols-1 row-cols-md-2 g-4">
+                    </div>
+
+            </section>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

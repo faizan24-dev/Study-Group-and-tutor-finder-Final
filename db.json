@@ -1,0 +1,111 @@
+{
+  "groups": [
+    {
+      "id": "1",
+      "title": "Data Structures Final Prep",
+      "subject": "Computer Science",
+      "schedule": "Fridays, 6 PM - 8 PM",
+      "contact": "cs.study@example.com",
+      "status": "Active"
+    },
+    {
+      "id": "3",
+      "title": "MERN Stack Builders Club",
+      "subject": "Backend Engineering",
+      "schedule": "Wednesdays, 7 PM - 9 PM",
+      "contact": "fullstack@example.com",
+      "status": "Active"
+    },
+    {
+      "id": "4",
+      "title": "E-commerce & Local Dropshipping",
+      "subject": "Business & Marketing",
+      "schedule": "Thursdays, 5 PM - 7 PM",
+      "contact": "scale.ecom@example.com",
+      "status": "Active"
+    },
+    {
+      "id": "5",
+      "title": "AI Image Gen Hackathon Team",
+      "subject": "Artificial Intelligence",
+      "schedule": "Weekends, Flexible",
+      "contact": "pixel.ai@example.com",
+      "status": "Active"
+    },
+    {
+      "id": "6",
+      "title": "UI/UX Brutalist Design Workshop",
+      "subject": "Design",
+      "schedule": "Mondays, 3 PM - 5 PM",
+      "contact": "darkmode@example.com",
+      "status": "Hidden"
+    },
+    {
+      "id": "7",
+      "title": "IUB BSCS Study Lounge",
+      "subject": "General CS",
+      "schedule": "Daily, 10 AM - 4 PM",
+      "contact": "bscs.lounge@example.com",
+      "status": "Active"
+    }
+  ],
+  "tutors": [
+    {
+      "id": "1",
+      "name": "Ali Khan",
+      "expertise": "Calculus II & Linear Algebra",
+      "availability": "Weekends, Flexible",
+      "email": "mathwiz@example.com",
+      "status": "Active"
+    },
+    {
+      "id": "2",
+      "name": "Sara Ahmed",
+      "expertise": "Database Systems (PERN Stack)",
+      "availability": "Mon-Wed, Evenings",
+      "email": "sara.db@example.com",
+      "status": "Active"
+    },
+    {
+      "id": "3",
+      "name": "Bilal Tariq",
+      "expertise": "Vanilla JavaScript & DOM Manipulation",
+      "availability": "Tuesdays, 2 PM - 6 PM",
+      "email": "js.master@example.com",
+      "status": "Active"
+    },
+    {
+      "id": "4",
+      "name": "Fatima Noor",
+      "expertise": "Direct-Response Video Ads",
+      "availability": "Fridays, Mornings",
+      "email": "creatives@example.com",
+      "status": "Hidden"
+    },
+    {
+      "id": "5",
+      "name": "Usman Raza",
+      "expertise": "Node.js & Express API Design",
+      "availability": "Thursdays, 6 PM - 8 PM",
+      "email": "backend.pro@example.com",
+      "status": "Active"
+    },
+    {
+      "id": "6",
+      "name": "Zainab Malik",
+      "expertise": "Object-Oriented Programming (Java/C++)",
+      "availability": "Wednesdays, 1 PM - 4 PM",
+      "email": "oop.tutor@example.com",
+      "status": "Active"
+    },
+    {
+      "name": "OMER AJMAL",
+      "expertise": "WEB",
+      "availability": "Mondays, 5pm-7pm",
+      "email": "faizan@gmail.com",
+      "status": "Active",
+      "id": "OHuPNdhqXkE"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
