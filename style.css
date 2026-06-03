@@ -1,0 +1,49 @@
+
+:root {
+  --zinc-bg: #18181b;       
+  --zinc-card: #27272a;     
+  --purple-accent: #9333ea; 
+  --purple-hover: #a855f7;  
+  --gold-accent: #fbbf24;   
+}
+
+body.custom-bg-zinc {
+  background-color: var(--zinc-bg);
+  color: #f4f4f5;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.card.bg-dark {
+  background-color: var(--zinc-card) !important;
+}
+
+.custom-text-gold {
+  color: var(--gold-accent) !important;
+}
+
+.custom-border-purple {
+  border-bottom: 2px solid var(--purple-accent) !important;
+}
+
+.custom-btn-purple {
+  background-color: var(--purple-accent);
+  color: #ffffff;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-btn-purple:hover {
+  background-color: var(--purple-hover);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.custom-hover-purple:hover {
+  background-color: var(--purple-accent);
+  border-color: var(--purple-accent);
+  color: #ffffff;
+}
+
+.tracking-wide {
+  letter-spacing: 0.05em;
+}
