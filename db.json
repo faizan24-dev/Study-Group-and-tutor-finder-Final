@@ -47,6 +47,14 @@
       "schedule": "Daily, 10 AM - 4 PM",
       "contact": "bscs.lounge@example.com",
       "status": "Active"
+    },
+    {
+      "title": "ZESHAN ,CH,HARAM",
+      "subject": "OOp",
+      "schedule": "Mondays, 5pm-7pm",
+      "contact": "faizy@gmail.,com",
+      "status": "Active",
+      "id": "DQPtp2JxjP8"
     }
   ],
   "tutors": [
