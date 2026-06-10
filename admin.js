@@ -30,3 +30,23 @@ async function loadAdminData() {
         tableBody.innerHTML = `<tr><td colspan="5" class="text-center text-danger py-4">Failed to load data. Is JSON Server running?</td></tr>`;
     }
 }
+
+
+async function deleteListing(id, type) {
+    const isConfirmed = confirm('Are you sure you want to delete this listing? This action cannot be undone.');
+    
+    if (!isConfirmed) return;
+
+    try {
+        const response = await fetch(`${API_URL}/${type}/${id}`, {
+            method: 'DELETE'
+        });
+
+        if (!response.ok) throw new Error('Failed to delete listing');
+
+        await loadAdminData(); 
+
+    } catch (error) {
+        console.error('Delete error:', error);
+    }
+}
