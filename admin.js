@@ -31,6 +31,26 @@ async function loadAdminData() {
     }
 }
 
+try {
+        // Use PATCH to update only the provided fields
+        const response = await fetch(`${API_URL}/${type}/${id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) throw new Error('Failed to update listing');
+
+        editModal.hide();
+        await loadAdminData(); // Re-fetch and re-render to show updates
+
+    } catch (error) {
+        console.error('Update error:', error);
+    }
+}
+
 
 async function deleteListing(id, type) {
     const isConfirmed = confirm('Are you sure you want to delete this listing? This action cannot be undone.');
