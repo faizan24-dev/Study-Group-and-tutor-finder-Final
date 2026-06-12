@@ -30,6 +30,29 @@ async function loadAdminData() {
         tableBody.innerHTML = `<tr><td colspan="5" class="text-center text-danger py-4">Failed to load data. Is JSON Server running?</td></tr>`;
     }
 }
+async function handleSaveEdit() {
+    const id = document.getElementById('edit-id').value;
+    const type = document.getElementById('edit-type').value;
+    
+    // Construct the updated payload mapping back to the correct schema
+    let payload = {};
+    if (type === 'groups') {
+        payload = {
+            title: document.getElementById('edit-title').value.trim(),
+            subject: document.getElementById('edit-subject').value.trim(),
+            schedule: document.getElementById('edit-schedule').value.trim(),
+            contact: document.getElementById('edit-contact').value.trim(),
+            status: document.getElementById('edit-status').value
+        };
+    } else {
+        payload = {
+            name: document.getElementById('edit-title').value.trim(),
+            expertise: document.getElementById('edit-subject').value.trim(),
+            availability: document.getElementById('edit-schedule').value.trim(),
+            email: document.getElementById('edit-contact').value.trim(),
+            status: document.getElementById('edit-status').value
+        };
+    }
 
 try {
         // Use PATCH to update only the provided fields
@@ -49,7 +72,7 @@ try {
     } catch (error) {
         console.error('Update error:', error);
     }
-}
+
 
 
 async function deleteListing(id, type) {
