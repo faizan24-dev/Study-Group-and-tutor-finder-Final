@@ -3,6 +3,10 @@ const API_URL = 'http://localhost:3000';
 const tableBody = document.getElementById('admin-table-body');
 const statsContainer = document.getElementById('stats-container');
 
+const editModalElement = document.getElementById('editModal');
+const editModal = new bootstrap.Modal(editModalElement);
+const saveEditBtn = document.getElementById('save-edit-btn');
+
 async function loadAdminData() {
     try {
         const [groupsRes, tutorsRes] = await Promise.all([
@@ -52,10 +56,9 @@ async function handleSaveEdit() {
             email: document.getElementById('edit-contact').value.trim(),
             status: document.getElementById('edit-status').value
         };
-    }
+    }}
 
 try {
-        // Use PATCH to update only the provided fields
         const response = await fetch(`${API_URL}/${type}/${id}`, {
             method: 'PATCH',
             headers: {
@@ -67,7 +70,7 @@ try {
         if (!response.ok) throw new Error('Failed to update listing');
 
         editModal.hide();
-        await loadAdminData(); // Re-fetch and re-render to show updates
+        await loadAdminData(); 
 
     } catch (error) {
         console.error('Update error:', error);
